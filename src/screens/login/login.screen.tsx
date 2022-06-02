@@ -3,7 +3,7 @@ import { Wrapper } from "./login.styled";
 import Button from "../../components/button/button";
 import Input from "../../components/input/input";
 import ErrorMessage from "../../components/error-message/error-message";
-import { regexPassword } from "../../utils/regex/password.regex";
+import { regexPassword } from "../../utils/regex/password";
 import * as yup from "yup";
 import { IDataState } from "./login.types";
 import { 
@@ -20,6 +20,7 @@ export default function Form() {
     })
 
     const [error, setError] = useState<string>('')
+    console.log(error)
 
     const handleChange = useCallback(
         ({ target }: React.ChangeEvent<HTMLInputElement>) => {
@@ -68,8 +69,8 @@ export default function Form() {
                     placeholder="Senha" 
                     onChange={handleChange} 
                 />
-                <ErrorMessage>{error}</ErrorMessage>
                 <Button onClick={handleSend}>Entrar</Button>
+                <ErrorMessage message={error}/>
             </Grid>
         </Wrapper>
     )
