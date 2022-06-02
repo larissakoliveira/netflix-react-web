@@ -11,7 +11,12 @@ export const Input = styled.input`
     padding: 8px;
     margin: 0 0 22px;
     border-radius: 5px;
-    border: 1px solid #E0E0E0; 
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box; 
+
+    :focus {
+        outline: none;
+    }
 `
 
 export const Button = styled.button`
@@ -22,9 +27,21 @@ export const Button = styled.button`
     border-radius: 5px;
     background-color: #E31A13;
     border: 0;
+    cursor: pointer;
+    font-weight: 800;
+
+    :hover {
+        background:linear-gradient(to bottom, #E31A13 15%, #E31A 100%); 
+    }
+    :active {
+        position: relative;
+        top: 1px;
+        left: 1px;
+    } 
 `
 
 export const Error = styled.p`
     color: #E31A13;
     font-weight: 800;
+    text-align: center;
 `
