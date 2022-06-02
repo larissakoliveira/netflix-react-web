@@ -1,5 +1,9 @@
 import { Grid } from "@mui/material";
-import { Button, Error, Input, Wrapper } from "./login.styled";
+import { Wrapper } from "./login.styled";
+import Button from "../../components/button/button";
+import Input from "../../components/input/input";
+import ErrorMessage from "../../components/error-message/error-message";
+import { regexPassword } from "../../utils/regex/password.regex";
 import * as yup from "yup";
 import { IDataState } from "./login.types";
 import { 
@@ -10,14 +14,12 @@ import {
 
 export default function Form() {
 
-    const passwordRegex = /^((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/
-
     const [data, setData] = useState<IDataState>({
         email: '',
         password: ''
     })
 
-    const [error, setError] = useState('')
+    const [error, setError] = useState<string>('')
 
     const handleChange = useCallback(
         ({ target }: React.ChangeEvent<HTMLInputElement>) => {
@@ -34,7 +36,7 @@ export default function Form() {
             try {
                 const schema = yup.object().shape({
                     email: yup.string().required().email(),
-                    password: yup.string().required().min(8).matches(passwordRegex, "Password must contain at least 1 lowercase and uppercase letter, 1 special character and 1 number!")
+                    password: yup.string().required().min(8).matches(regexPassword, "Password must contain at least 1 lowercase and uppercase letter, 1 special character and 1 number!")
                 })    
 
                 await schema.validate(data)  
@@ -66,8 +68,8 @@ export default function Form() {
                     placeholder="Senha" 
                     onChange={handleChange} 
                 />
+                <ErrorMessage>{error}</ErrorMessage>
                 <Button onClick={handleSend}>Entrar</Button>
-                <Error>{error}</Error>
             </Grid>
         </Wrapper>
     )
