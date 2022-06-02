@@ -12,7 +12,7 @@ export const Input = styled.input`
     margin: 0 0 22px;
     border-radius: 5px;
     border: 1px solid #E0E0E0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 
     :focus {
         outline: none;
@@ -31,7 +31,7 @@ export const Button = styled.button`
     font-weight: 800;
 
     :hover {
-        background:linear-gradient(to bottom, #E31A13 15%, #E31A 100%); 
+        opacity: 0.9    ;
     }
     :active {
         position: relative;
