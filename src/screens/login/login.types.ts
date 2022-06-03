@@ -3,3 +3,5 @@ export interface IDataState {
     password: string;
   }
 
+      
+export const LOGIN_URL = '/login';
