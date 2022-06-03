@@ -2,11 +2,16 @@
 
 Project create with [React](https://reactjs.org/)
 
-
 # Netflix Project
 
 This project is being done during an incredible bootcamp by Etho / McFadyen. 
 It is being developed according to the best practices of directory structures and coding, also is seeking to deliver the best performance to the user, focused on high application performance, so these new devs will be able to make a better work after this training.
+
+### Content table
+=================
+   * [Description](#Netflix Project)
+   * [My project's gitflow explained](#My project's gitflow explained)
+   * [Techs](#Techs)
 
 ### My project's gitflow explained
 
@@ -25,3 +30,8 @@ Feature/themes -> used for code related to the themes, global styles.
 Feature/router -> used to work with all routes logic that this app needs.
 
 Feature/readme -> used to create this readme.
+
+
+### Techs
+
+**Client:** React, Redux, Yup, Material UI, Typescript, Styled-Components, React-Router-Dom
