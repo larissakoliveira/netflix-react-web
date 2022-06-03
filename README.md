@@ -2,16 +2,17 @@
 
 Project create with [React](https://reactjs.org/)
 
-# Netflix Project
-
-This project is being done during an incredible bootcamp by Etho / McFadyen. 
-It is being developed according to the best practices of directory structures and coding, also is seeking to deliver the best performance to the user, focused on high application performance, so these new devs will be able to make a better work after this training.
-
 ### Content table
 =================
    * [Description](#Netflix)
    * [My project's gitflow explained](#My)
    * [Techs](#Techs)
+
+# Netflix Project
+
+This project is being done during an incredible bootcamp by Etho / McFadyen. 
+It is being developed according to the best practices of directory structures and coding, also is seeking to deliver the best performance to the user, focused on high application performance, so these new devs will be able to make a better work after this training.
+
 
 ### My project's gitflow explained
 
