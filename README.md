@@ -1,46 +1,27 @@
-# Getting Started with Create React App
+# Netflix Etho / McFadyen - Bootcamp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project create with [React](https://reactjs.org/)
 
-## Available Scripts
 
-In the project directory, you can run:
+# Netflix Project
 
-### `npm start`
+This project is being done during an incredible bootcamp by Etho / McFadyen. 
+It is being developed according to the best practices of directory structures and coding, also is seeking to deliver the best performance to the user, focused on high application performance, so these new devs will be able to make a better work after this training.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### My project's gitflow explained
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+For now I have 6 branches, main, develop, feature/screen/login, feature/themes, feature/router, feature/readme.
 
-### `npm test`
+I tried to apply as much as possible these rules from [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) to create my commits and branches.
+ 
+Main -> has the final version to production.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Develop -> contains pre-production code, used to test the application before merge the whole code with the main branch.
 
-### `npm run build`
+Feature/screen/login -> used most to code LOGIN, styles, components, schemas, types, utils, all logic that was related to the login screen.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Feature/themes -> used for code related to the themes, global styles.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Feature/router -> used to work with all routes logic that this app needs.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Feature/readme -> used to create this readme.
