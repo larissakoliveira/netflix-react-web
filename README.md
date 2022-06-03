@@ -9,8 +9,8 @@ It is being developed according to the best practices of directory structures an
 
 ### Content table
 =================
-   * [Description](#Netflix Project)
-   * [My project's gitflow explained](#My project's gitflow explained)
+   * [Description](#Netflix)
+   * [My project's gitflow explained](#My)
    * [Techs](#Techs)
 
 ### My project's gitflow explained
