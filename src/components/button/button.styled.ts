@@ -1,22 +1,22 @@
 import styled from "styled-components";
 
 export const Button = styled.button`
-color: ${props => props.theme.palette.typography.primary};
+border: 0;
 width: 100%;
 padding: 9px;
-margin: 0 0 22px;
-border-radius: 5px;
-background-color: ${props => props.theme.palette.core.primary};
-border: 0;
 cursor: pointer;
-font-family: ${props => props.theme.palette.typography.primaryFont};
+margin: 0 0 22px;
+color: ${props => props.theme.palette.typography.primary};
+border-radius: ${props => props.theme.layout.border.medium};
+background-color: ${props => props.theme.palette.core.primary};
 
 :hover {
     opacity: 0.9    ;
 }
+
 :active {
-    position: relative;
     top: 1px;
     left: 1px;
+    position: relative;
 } 
 `

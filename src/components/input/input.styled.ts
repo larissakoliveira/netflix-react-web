@@ -1,15 +1,20 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Input = styled.input`
 width: 100%;
 padding: 8px;
 margin: 0 0 22px;
-border-radius: 5px;
-border: 1px solid #E0E0E0;
 box-sizing: border-box;
-font-family: ${props => props.theme.palette.typography.primaryFont};
+border-radius: ${props => props.theme.layout.border.medium};
 
 :focus {
     outline: none;
 }
+
+border: ${props => {
+    const { theme: { layout, palette } } = props
+    
+    return css`${ layout.border.small} solid ${ palette.border.default }`
+}};
+
 `

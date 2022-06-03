@@ -7,9 +7,9 @@ import { GlobalStyles } from "./themes/main/global.styles";
 function App() {
   return (
     <>
+    <GlobalStyles />
     <ThemeProvider theme={theme}>
    <Login />
-    <GlobalStyles />
    </ThemeProvider>
     </>
   );
