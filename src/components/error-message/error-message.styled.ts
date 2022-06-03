@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Error = styled.p`
-color: ${props => props.theme.palette.core.primary};
+margin-top: 0;
+font-size: 10px;
 font-weight: 800;
 text-align: center;
-font-size: 10px;
-margin-top: 0;
+color: ${props => props.theme.palette.core.primary};
 `
