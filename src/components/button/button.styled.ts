@@ -10,7 +10,6 @@ background-color: ${props => props.theme.palette.core.primary};
 border: 0;
 cursor: pointer;
 font-family: ${props => props.theme.palette.typography.primaryFont};
-font-weight: 800;
 
 :hover {
     opacity: 0.9    ;

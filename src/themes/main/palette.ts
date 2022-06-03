@@ -5,10 +5,15 @@ const core = {
 
 const typography = {
   primary: '#FFFFFF',
-  contrast: '#868D96'
+  contrast: '#868D96',
+};
+
+const border = {
+  default: '#E0E0E0',
 };
 
 export const palette = {
   core,
-  typography
+  typography,
+  border
 };
