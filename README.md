@@ -1,40 +1,60 @@
-# Netflix Etho / McFadyen - Bootcamp
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/82476805/171954276-4b4a2bc8-07b6-45a5-8919-29d6b8da7f38.png" />
+</p>
+
+# Netflix clone by Etho / McFadyen - Bootcamp
 
 Project create with [React](https://reactjs.org/)
 
-### Content table
+### Table of Contents
 =================
    * [Description](#Description)
-   * [My project's gitflow explained](#Gitflow)
+   * [Design](#Design)
+   * [Gitflow](#Gitflow)
    * [Techs](#Techs)
+   * [Status](#Status)
 
 ### Description
 # Netflix Project
 
-This project is being done during an incredible bootcamp by Etho / McFadyen. 
-It is being developed according to the best practices of directory structures and coding, also is seeking to deliver the best performance to the user, focused on high application performance, so these new devs will be able to make a better work after this training.
+This project is a simple clone of Netflix, it is being done during an incredible bootcamp by Etho / McFadyen. 
+It is being developed according to the **best practices** of directory/files structures and coding, also is seeking to deliver the **best performance** to the user, focused on high application performance, so these new devs will be able to do a better work after this training.
+
+### Design
+[Design](https://xd.adobe.com/view/9a195402-0530-4f98-80ee-8b27b0e10759-cf4a/)
 
 ### Gitflow
 
-#### My project's gitflow explained
-
-For now I have 6 branches, main, develop, feature/screen/login, feature/themes, feature/router, feature/readme.
-
+My project's gitflow explained -> for now I have 6 branches: **main, develop, feature/screen/login, feature/themes, feature/router, feature/readme.**
 I tried to apply as much as possible these rules from [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) to create my commits and branches.
  
-Main -> has the final version to production.
+* **Main** -> has the final version to production.
 
-Develop -> contains pre-production code, used to test the application before merge the whole code with the main branch.
+* **Develop** -> contains pre-production code, used to test the application before merge it into main branch.
 
-Feature/screen/login -> used most to code LOGIN, styles, components, schemas, types, utils, all logic that was related to the login screen.
+* **Feature/screen/login** -> used most to code LOGIN, styles, components, schemas, types, utils, all logic that was related to the login screen.
 
-Feature/themes -> used for code related to the themes, global styles.
+* **Feature/themes** -> used for code related to the themes, global styles.
 
-Feature/router -> used to work with all routes logic that this app needs.
+* **Feature/router** -> used to work with all routes logic that this app needs.
 
-Feature/readme -> used to create this readme.
+* **Feature/readme** -> used to create this readme.
 
 
 ### Techs
 
-**Client:** React, Redux, Yup, Material UI, Typescript, Styled-Components, React-Router-Dom
+**Client:** 
+   * [React](https://reactjs.org/docs/getting-started.html)
+   * [Typescript](https://www.typescriptlang.org/docs/)
+   * [Redux](https://redux.js.org/tutorials/essentials/part-1-overview-concepts)
+   * [Yup](https://github.com/jquense/yup)
+   * [Material UI](https://mui.com/pt/material-ui/getting-started/installation/)
+   * [Styled-Components](https://styled-components.com/docs)
+   * [React-Router-Dom](https://v5.reactrouter.com/web/guides/quick-start)
+
+ 
+ ### Status
+ 
+ <h4 align="center"> 
+	🚧  Project 🚀 under construction! coming soon...  🚧
+</h4>
