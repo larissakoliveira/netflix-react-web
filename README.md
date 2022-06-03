@@ -4,17 +4,19 @@ Project create with [React](https://reactjs.org/)
 
 ### Content table
 =================
-   * [Description](#Netflix)
-   * [My project's gitflow explained](#My)
+   * [Description](#Description)
+   * [My project's gitflow explained](#Gitflow)
    * [Techs](#Techs)
 
+### Description
 # Netflix Project
 
 This project is being done during an incredible bootcamp by Etho / McFadyen. 
 It is being developed according to the best practices of directory structures and coding, also is seeking to deliver the best performance to the user, focused on high application performance, so these new devs will be able to make a better work after this training.
 
+### Gitflow
 
-### My project's gitflow explained
+#### My project's gitflow explained
 
 For now I have 6 branches, main, develop, feature/screen/login, feature/themes, feature/router, feature/readme.
 
