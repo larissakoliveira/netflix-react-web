@@ -23,30 +23,32 @@ It is being developed according to the **best practices** of directory/files str
 ### Design
 [Design](https://xd.adobe.com/view/9a195402-0530-4f98-80ee-8b27b0e10759-cf4a/)
 
+<div disply="flex">
 ![image](https://user-images.githubusercontent.com/82476805/171961894-94b799cd-92a5-4495-8ee5-c78faeff5363.png)
 ![image](https://user-images.githubusercontent.com/82476805/171961941-d7a024b4-868a-482a-ab39-9b250b0db43e.png)
 ![image](https://user-images.githubusercontent.com/82476805/171961984-2ab192ba-7790-407d-9585-5a5fa7579ca1.png)
 ![image](https://user-images.githubusercontent.com/82476805/171962031-6852ee58-61e2-4a57-8d04-b2e237da1acd.png)
+</div>
+
 
 ### Gitflow
 
 #### My project's gitflow explained
 
 For now I have 6 branches: **main, develop, feature/screen/login, feature/themes, feature/router, feature/readme.**
-
 I tried to apply as much as possible these rules from [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) to create my commits and branches.
  
-**Main** -> has the final version to production.
+* **Main** -> has the final version to production.
 
-**Develop** -> contains pre-production code, used to test the application before merge it into main branch.
+* **Develop** -> contains pre-production code, used to test the application before merge it into main branch.
 
-**Feature/screen/login** -> used most to code LOGIN, styles, components, schemas, types, utils, all logic that was related to the login screen.
+* **Feature/screen/login** -> used most to code LOGIN, styles, components, schemas, types, utils, all logic that was related to the login screen.
 
-**Feature/themes** -> used for code related to the themes, global styles.
+* **Feature/themes** -> used for code related to the themes, global styles.
 
-**Feature/router** -> used to work with all routes logic that this app needs.
+* **Feature/router** -> used to work with all routes logic that this app needs.
 
-**Feature/readme** -> used to create this readme.
+* **Feature/readme** -> used to create this readme.
 
 
 ### Techs
