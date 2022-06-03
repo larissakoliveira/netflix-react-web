@@ -10,7 +10,7 @@ Project create with [React](https://reactjs.org/)
 =================
    * [Description](#Description)
    * [Design](#Design)
-   * [My project's gitflow explained](#Gitflow)
+   * [Gitflow](#Gitflow)
    * [Techs](#Techs)
    * [Status](#Status)
 
@@ -24,9 +24,8 @@ It is being developed according to the **best practices** of directory/files str
 [Design](https://xd.adobe.com/view/9a195402-0530-4f98-80ee-8b27b0e10759-cf4a/)
 
 ### Gitflow
-#### My project's gitflow explained
 
-For now I have 6 branches: **main, develop, feature/screen/login, feature/themes, feature/router, feature/readme.**
+My project's gitflow explained -> for now I have 6 branches: **main, develop, feature/screen/login, feature/themes, feature/router, feature/readme.**
 I tried to apply as much as possible these rules from [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) to create my commits and branches.
  
 * **Main** -> has the final version to production.
