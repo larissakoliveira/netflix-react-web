@@ -1,5 +1,7 @@
 import './App.css';
+import { Provider } from 'react-redux';
 import theme from "./themes/main/theme";
+import store from "./store/store/store";
 import MoviesList from './screens/movies-list';
 import { Route, Routes } from 'react-router-dom';
 import Login from "./screens/login/login.screen";
@@ -11,6 +13,7 @@ import { LOGIN_URL } from './screens/login/login.types';
 function App() {
   return (
     <>
+    <Provider store={store}>
     <GlobalStyles />
     <ThemeProvider theme={theme}>
       <Routes>
@@ -18,6 +21,7 @@ function App() {
         <Route element={<MoviesList/>} path={MOVIES_LIST_URL}/>
       </Routes>
    </ThemeProvider>
+   </Provider>
     </>
   );
 }
