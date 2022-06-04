@@ -26,7 +26,7 @@ It is being developed according to the **best practices** of directory/files str
 
 ### Gitflow
 
-My project's gitflow explained -> for now I have 6 branches: **main, develop, feature/screen/login, feature/themes, feature/router, feature/readme.**
+My project's gitflow explained -> for now I have 7 branches: **main, develop, feature/screen/login, feature/themes, feature/router, feature/readme, feature/redux.**
 I tried to apply as much as possible these rules from [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) to create my commits and branches.
  
 * **Main** -> has the final version to production.
@@ -40,6 +40,8 @@ I tried to apply as much as possible these rules from [Conventional Commits](htt
 * **Feature/router** -> used to work with all routes logic that this app needs.
 
 * **Feature/readme** -> used to create this readme.
+
+* **Feature/redux** -> used to create the entire logic used in redux.
 
 
 ### Techs
