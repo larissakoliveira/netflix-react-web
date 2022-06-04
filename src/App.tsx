@@ -1,7 +1,7 @@
 import './App.css';
 import { Provider } from 'react-redux';
-import theme from "./themes/main/theme";
 import store from "./store/store/store";
+import theme from "./themes/main/theme";
 import MoviesList from './screens/movies-list';
 import { Route, Routes } from 'react-router-dom';
 import Login from "./screens/login/login.screen";
