@@ -13,7 +13,8 @@ Project create with [React](https://reactjs.org/)
    * [Gitflow](#Gitflow)
    * [Techs](#Techs)
    * [Status](#Status)
-
+   * [Author](#Author)
+ 
 ### Description
 # Netflix Project
 
@@ -58,3 +59,11 @@ I tried to apply as much as possible these rules from [Conventional Commits](htt
  <h4 align="center"> 
 	🚧  Project 🚀 under construction! coming soon...  🚧
 </h4>
+
+### Author
+---
+Made with ❤️ by Larissa Oliveira 👋🏽 Get in touch!
+
+<a target="_blank" href="https://www.linkedin.com/in/larissakoliveira/"> Linkedin 
+	
+</a>
