@@ -6,9 +6,9 @@ import { Grid } from '@mui/material';
 import { Wrapper } from './login.styled';
 import { IDataState } from './login.types';
 import { loginSchema } from './login.schema';
-import Input from '../../components/input/input';
-import Button from '../../components/button/button';
-import ErrorMessage from '../../components/error-message/error-message';
+import Input from 'components/input/input';
+import Button from 'components/button/button';
+import ErrorMessage from 'components/error-message/error-message';
 
 export default function Form() {
   const [data, setData] = useState<IDataState>({
