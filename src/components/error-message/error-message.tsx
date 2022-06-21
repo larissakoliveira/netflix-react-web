@@ -1,11 +1,11 @@
-import { Error } from "./error-message.styled";
+import { Error } from './error-message.styled';
 
 export default function ErrorMessage(props: any) {
-    const { message, ...restProps } = props;
+  const { message, ...restProps } = props;
 
-    return (
+  return (
     <Error {...restProps}>
-        {message}
+      {message}
     </Error>
-    )
+  );
 }

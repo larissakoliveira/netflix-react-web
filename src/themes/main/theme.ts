@@ -1,8 +1,8 @@
-import { layout } from "./layout";
-import { palette } from "./palette";
+import { layout } from './layout';
+import { palette } from './palette';
 
-const theme ={
+const theme = {
   palette,
-  layout
-}
+  layout,
+};
 export default theme;
