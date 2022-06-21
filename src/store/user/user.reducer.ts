@@ -1,9 +1,12 @@
-const authenticated = (state: any, action: any) => {
-  state.authenticated = action.payload;
+import { PayloadAction } from "@reduxjs/toolkit";
+import { Data, User } from "./user.type";
+
+const setData = (state: User, action: PayloadAction<Data>) => {
+  state.data = action.payload;
 };
 
 const reducers = {
-  authenticated,
+  setData,
 };
 
 export default reducers;
