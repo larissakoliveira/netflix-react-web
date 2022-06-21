@@ -4,19 +4,20 @@ import React, {
 } from 'react';
 import { Grid } from '@mui/material';
 import { Wrapper } from './login.styled';
-import { IDataState } from './login.types';
-import { loginSchema } from './login.schema';
+import { Error } from '../../types/yup';
 import Input from 'components/input/input';
+import { loginSchema } from './login.schema';
 import Button from 'components/button/button';
+import { IFormDataState } from './login.types';
 import ErrorMessage from 'components/error-message/error-message';
 
 export default function Form() {
-  const [data, setData] = useState<IDataState>({
+  const [data, setData] = useState<IFormDataState>({
     email: '',
     password: '',
   });
 
-  const [error, setError] = useState<string>('');
+  const [error, setError] = useState('');
 
   const handleChange = useCallback(
     ({ target }: React.ChangeEvent<HTMLInputElement>) => {
@@ -31,10 +32,10 @@ export default function Form() {
   const handleSend = useCallback(
     async () => {
       try {
-        await loginSchema.validate(data, { abortEarly: false });
+        await loginSchema.validate(data);
         setError('');
-      } catch (e: any) {
-        setError(e.errors[0]);
+      } catch (yupError: unknown) {
+        setError((yupError as Error).errors[0]);
       }
     },
     [data],

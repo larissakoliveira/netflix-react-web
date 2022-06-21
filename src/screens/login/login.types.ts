@@ -1,4 +1,4 @@
-export interface IDataState {
+export interface IFormDataState {
   email: string;
   password: string;
 }
