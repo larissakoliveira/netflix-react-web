@@ -19,7 +19,7 @@ module.exports = {
       'react',
       '@typescript-eslint',
     ],
-    rules: [
+    rules: {
       'import/prefer-default-export': 'off'
-    ]
+    }
   };

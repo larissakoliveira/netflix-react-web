@@ -20,12 +20,17 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "paths": {
-      "components/*": [ "./src/components/*" ],
-      "store/*": [ "./src/store/*" ],
-      "types/*": [ "./src/types/*" ],
+      "screens/*": [ "src/screens/*" ],
+      "store/*": [ "src/store/*" ],
+      "modules/*": [ "src/modules/*" ],
+      "types/*": [ "src/types/*" ],
+      "services/*": [ "src/services/*" ],
+      "themes/*": [ "src/themes/*" ],
+      "components/*": [ "src/components/*" ]
     }
   },
   "include": [
     "src"
-  ]
+  ],
+  "extends": "./tsconfig.path.json"
 }
