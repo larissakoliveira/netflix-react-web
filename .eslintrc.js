@@ -20,6 +20,18 @@ module.exports = {
       '@typescript-eslint',
     ],
     rules: {
-      'import/prefer-default-export': 'off'
+      'import/prefer-default-export': 'off',
+      'no-param-reassign': [
+        'error', {
+          props: true,
+          ignorePropertyModificationsFor: ['state']
+        }
+      ],
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_'
+        }
+      ]
     }
   };
