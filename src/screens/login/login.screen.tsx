@@ -11,8 +11,8 @@ import Button from 'components/button/button';
 import { useDispatch, useSelector } from 'react-redux';
 import { authenticated } from 'store/user/user.selector';
 import ErrorMessage from 'components/error-message/error-message';
-import { loginSchema } from './login.schema';
 import { Wrapper } from './login.styled';
+import { loginSchema } from './login.schema';
 
 export default function Form() {
   const [data, setData] = useState({
