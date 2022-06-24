@@ -28,13 +28,13 @@ export type Settings = {
 
 export type Error = string;
 
-export type Shows = {
+export type ShowData = {
   data: Data
   settings: Settings
   error: Error;
 };
 
-export type BaseReducer<Payload> = (state: Shows, action: PayloadAction<Payload>) => void;
+export type BaseReducer<Payload> = (state: ShowData, action: PayloadAction<Payload>) => void;
 
 export type GetList = BaseReducer<undefined>;
 
