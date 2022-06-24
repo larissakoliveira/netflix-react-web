@@ -9,6 +9,7 @@ import Login from 'screens/login/login.screen';
 import { LOGIN_URL } from 'screens/login/login.type';
 import { GlobalStyles } from 'themes/main/global.styles';
 import { SHOWS_URL } from 'screens/shows/shows.type';
+import Guard from 'components/guard/guard';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <Routes>
           <Route element={<Login />} path={LOGIN_URL} />
-          <Route element={<Shows />} path={SHOWS_URL} />
+          <Route element={<Guard><Shows /></Guard>} path={SHOWS_URL} />
         </Routes>
       </ThemeProvider>
     </Provider>
