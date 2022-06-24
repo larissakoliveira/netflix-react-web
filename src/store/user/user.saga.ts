@@ -19,7 +19,9 @@ function* sanitizeValues() {
   yield put(userSlice.actions.setError(''));
 }
 
-export default function* userSaga() {
-  yield takeLatest('user/authentication', authentication);
-  yield takeLatest('user/cart', sanitizeValues);
-}
+const userSaga = [
+  takeLatest('user/authentication', authentication),
+  takeLatest('user/cart', sanitizeValues),
+];
+
+export default userSaga;
