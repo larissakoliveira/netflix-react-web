@@ -1,9 +1,10 @@
 export type Data = {
-    email?: string;
-    token?: string;
-    refreshToken?: string;
-}
+  email?: string;
+  token?: string;
+  refreshToken?: string;
+};
 
 export type User = {
-    data: Data;
-}
+  data: Data;
+  error: string;
+};

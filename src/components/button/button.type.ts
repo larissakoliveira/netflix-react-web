@@ -1,6 +1,6 @@
-export { MouseEvent, ReactNode } from 'react';
+import { MouseEvent, ReactNode } from 'react';
 
 export type Props = {
-    onClick: (event: MouseEvent<HTMLButtonElement>) => void;
-    children: ReactNode
-}; 
+    onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+    children: ReactNode;
+};  

@@ -1,5 +1,7 @@
-import { User } from "store/user/user.type"
+import { Shows } from 'store/show/show.type';
+import { User } from 'store/user/user.type';
 
 export type Store = {
-    user: User
-}
+  user: User,
+  show: Shows
+};

@@ -1,26 +1,33 @@
 import React, {
   useCallback,
   useState,
+  useEffect,
 } from 'react';
 import { Grid } from '@mui/material';
-import { Wrapper } from './login.styled';
-import { Error } from '../../types/yup';
+import { Error } from 'types/yup';
 import Input from 'components/input/input';
-import { loginSchema } from './login.schema';
+import userSlice from 'store/user/user.slice';
 import Button from 'components/button/button';
-import { IFormDataState } from './login.types';
+import { useDispatch, useSelector } from 'react-redux';
+import { authenticated } from 'store/user/user.selector';
 import ErrorMessage from 'components/error-message/error-message';
+import { loginSchema } from './login.schema';
+import { Wrapper } from './login.styled';
 
 export default function Form() {
-  const [data, setData] = useState<IFormDataState>({
+  const [data, setData] = useState({
     email: '',
     password: '',
   });
 
   const [error, setError] = useState('');
 
+  const dispatch = useDispatch();
+  const userAuthenticated = useSelector(authenticated);
+
   const handleChange = useCallback(
     ({ target }: React.ChangeEvent<HTMLInputElement>) => {
+      setError('');
       setData((prevData) => ({
         ...prevData,
         [target.name]: target.value,
@@ -29,17 +36,29 @@ export default function Form() {
     [setData],
   );
 
+  const resetError = useCallback(
+    (errorMessage: string) => {
+      setError(errorMessage);
+    },
+    [],
+  );
+
   const handleSend = useCallback(
     async () => {
       try {
         await loginSchema.validate(data);
-        setError('');
+        resetError('');
+        dispatch(userSlice.actions.authentication(data));
       } catch (yupError: unknown) {
         setError((yupError as Error).errors[0]);
       }
     },
     [data],
   );
+
+  useEffect(() => {
+    console.log(userAuthenticated);
+  }, [userAuthenticated]);
 
   return (
     <Wrapper
