@@ -1,9 +1,9 @@
 import { useSelector } from 'react-redux';
-import { List } from 'store/show/show.type';
+import { List } from 'store/shows/shows.type';
 import axiosInstance from 'modules/axios/axios';
 import { tokenSelector } from '../../store/user/user.selector';
 
-export const showService = () => {
+export const showsService = () => {
   const token = useSelector(tokenSelector);
   const headers = {
     Authorization: `Bearer ${token}`,
