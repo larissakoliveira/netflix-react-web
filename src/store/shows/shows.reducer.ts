@@ -3,7 +3,7 @@ import {
   SetData,
   SetError,
   SetSettings,
-} from 'store/show/show.type';
+} from 'store/shows/shows.type';
 
 const getList: GetList = (_state, _action) => {};
 
