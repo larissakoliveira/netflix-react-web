@@ -1,14 +1,28 @@
 import { AxiosResponse } from 'axios';
 import { List } from 'store/shows/shows.type';
 import { showsService } from 'services/shows/shows';
-import { call, put, takeLatest } from 'redux-saga/effects';
+import {
+  call, cancel, put, select, takeLatest,
+} from 'redux-saga/effects';
+import { Data } from 'store/user/user.type';
 import { showsActions } from './shows.slice';
 import { BadRequestErrorMessage } from '../../services/shows/shows.type';
+import { tokenSelector } from '../user/user.selector';
 
 function* getList() {
+  const token: Data['token'] = yield select(tokenSelector);
+
+  if (!token) {
+    yield put(showsActions.setError('User token not found'));
+    yield cancel();
+  }
+
   try {
     yield put(showsActions.setSettings({ loading: true }));
-    const response: AxiosResponse<List> = yield call(showsService().getList);
+    const response: AxiosResponse<List> = yield call(
+      showsService({ token: token as string }).getList,
+    );
+
     yield put(showsActions.setData({ list: response.data }));
     yield put(showsActions.setError(''));
   } catch (exception) {
