@@ -23,7 +23,17 @@ function* getList() {
       showsService({ token: token as string }).getList,
     );
 
-    yield put(showsActions.setData({ list: response.data }));
+    const showsList = response.data.reduce((accumulator, show) => {
+      // @ts-ignore
+      const categoryKey = accumulator[show.category] || [];
+
+      return {
+        ...accumulator,
+        [show.category]: categoryKey.concat(show),
+      };
+    }, {});
+
+    yield put(showsActions.setData({ ...showsList }));
     yield put(showsActions.setError(''));
   } catch (exception) {
     yield put(showsActions.setError(BadRequestErrorMessage.BAD_REQUEST));

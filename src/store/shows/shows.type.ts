@@ -19,7 +19,7 @@ export type Show = {
 export type List = Show[];
 
 export type Data = {
-  list: List
+  [key: string]: List
 };
 
 export type Settings = {

@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { showsActions } from 'store/shows/shows.slice';
-import { listSelector } from '../../store/shows/shows.selector';
+import { dataSelector } from '../../store/shows/shows.selector';
 
 export default function Shows() {
-  const list = useSelector(listSelector);
+  const data = useSelector(dataSelector);
   const dispatch = useDispatch();
 
   useEffect(
@@ -16,9 +16,9 @@ export default function Shows() {
 
   useEffect(
     () => {
-      console.log(list);
+      console.log(data);
     },
-    [list],
+    [data],
   );
 
   return (
