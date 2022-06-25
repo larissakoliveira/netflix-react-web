@@ -17,7 +17,7 @@ Project create with [React](https://reactjs.org/)
  
 ### Description
 # Netflix Project
-
+ 
 This project is a simple clone of Netflix, it is being done during an incredible bootcamp by Etho / McFadyen. 
 It is being developed according to the **best practices** of directory/files structures and coding, also is seeking to deliver the **best performance** to the user, focused on high application performance, so these new devs will be able to do a better work after this training.
 
