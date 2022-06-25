@@ -29,20 +29,27 @@ It is being developed according to the **best practices** of directory/files str
 My project's gitflow explained -> for now I have 7 branches: **main, develop, feature/screen/login, feature/themes, feature/router, feature/readme, feature/redux.**
 I tried to apply as much as possible these rules from [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) to create my commits and branches.
  
-* **Main** -> has the final version to production.
+* **main** -> has the final version to production.
 
-* **Develop** -> contains pre-production code, used to test the application before merge it into main branch.
+* **develop** -> contains pre-production code, used to test the application before merge it into main branch.
 
-* **Feature/screen/login** -> used most to code LOGIN, styles, components, schemas, types, utils, all logic that was related to the login screen.
+* **feature/screens/login** -> used most to code LOGIN, styles, components, schemas, types, utils, all logic that was related to the login screen.
 
-* **Feature/themes** -> used for code related to the themes, global styles.
+* **feature/screens/shows** -> used to code everything related to list shows and get my list.
 
-* **Feature/router** -> used to work with all routes logic that this app needs.
+* **feature/themes** -> used for code related to the themes, global styles.
 
-* **Feature/readme** -> used to create this readme.
+* **feature/router** -> used to work with all routes logic that this app needs.
 
-* **Feature/redux** -> used to create the entire logic used in redux.
+* **feature/readme** -> used to create this readme.
 
+* **feature/redux** -> used to create the entire logic used in redux and saga.
+
+* **feature/guard** -> used to create guard to protect some specific routes that can be accessed only if authenticated.
+
+* **feature/grid** -> used to style and render all shows, list shows.
+
+* **feature/grid** -> used to try to add any extra feature, functionality.
 
 ### Techs
 
@@ -54,7 +61,9 @@ I tried to apply as much as possible these rules from [Conventional Commits](htt
    * [Material UI](https://mui.com/pt/material-ui/getting-started/installation/)
    * [Styled-Components](https://styled-components.com/docs)
    * [React-Router-Dom](https://v5.reactrouter.com/web/guides/quick-start)
-
+   * [Axios](https://axios-http.com/docs/intro)
+   * [React-Slick](https://react-slick.neostack.com/docs/get-started/)
+   * [Redux Saga](https://redux-saga.js.org/)
  
  ### Status
  
