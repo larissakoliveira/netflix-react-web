@@ -12,3 +12,8 @@ export type AuthResponse = AxiosResponse<{
 export const ErrorMessageEnum = {
   Unauthorized: 'An error occurred while authenticating user',
 };
+
+export type SignUp = {
+  email: string;
+  password: string;
+};

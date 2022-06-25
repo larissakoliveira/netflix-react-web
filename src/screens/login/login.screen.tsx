@@ -92,8 +92,8 @@ export default function Form() {
       alignContent="center"
       justifyContent="center"
     >
+      <h1>Login</h1>
       <Grid item xs={2}>
-
         <Input
           type="email"
           name="email"
@@ -107,7 +107,7 @@ export default function Form() {
           onChange={handleChange}
         />
         <ErrorMessage message={error || userError} />
-        <Button onClick={handleSend}>Entrar</Button>
+        <Button onClick={handleSend}>Login</Button>
 
       </Grid>
     </Wrapper>
