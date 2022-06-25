@@ -3,11 +3,12 @@ import Button from 'components/button/button';
 import ErrorMessage from 'components/error-message/error-message';
 import Input from 'components/input/input';
 import React, { useCallback, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { LOGIN_URL } from 'screens/login/login.type';
 import userService from 'services/user/user';
+import netflixLogo from 'assets/imgs/netflix-title.png';
 import { signUpSchema } from './sign-up.schema';
-import { Wrapper } from './sign-up.styled';
+import { ImageContainer, Wrapper } from './sign-up.styled';
 
 export default function SignUp() {
   const [data, setData] = useState({
@@ -60,9 +61,8 @@ export default function SignUp() {
       alignContent="center"
       justifyContent="center"
     >
-      <h1>Sign Up</h1>
       <Grid item xs={2}>
-
+        <ImageContainer src={netflixLogo} />
         <Input
           type="email"
           name="email"
@@ -72,12 +72,15 @@ export default function SignUp() {
         <Input
           type="password"
           name="password"
-          placeholder="Senha"
+          placeholder="Password"
           onChange={handleChange}
         />
         <ErrorMessage message={error} />
         <Button onClick={handleSend}>SignUp</Button>
-
+        <h3>
+          Already registered?
+          <Link to={LOGIN_URL}>Login</Link>
+        </h3>
       </Grid>
     </Wrapper>
   );
