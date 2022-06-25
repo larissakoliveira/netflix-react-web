@@ -11,8 +11,8 @@ export default function Shows() {
 
   const list = useSelector(listSelector);
   const myList = useSelector(myListSelector);
-  const movies = list.MOVIE;
-  const tvShows = list.TV_SHOWS;
+  const movies = list.movie;
+  const tvShows = list.tv_show;
 
   useEffect(
     () => {
@@ -35,9 +35,9 @@ export default function Shows() {
           slidesToShow={1}
           autoplaySpeed={2400}
         />
-        <ShowsList shows={myList} title="Minha Lista" />
-        { movies && <ShowsList shows={movies} title="Filmes" /> }
-        { tvShows && <ShowsList shows={tvShows} title="Séries" /> }
+        { movies && <ShowsList shows={movies} title="Movies" /> }
+        { myList && <ShowsList shows={myList} title="My List" />}
+        { tvShows && <ShowsList shows={tvShows} title="Tv Shows" /> }
       </Container>
     </>
   );

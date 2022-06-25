@@ -1,8 +1,8 @@
 import { PayloadAction } from '@reduxjs/toolkit';
 
 export enum Category {
-  MOVIE = 'MOVIE',
-  TV_SHOWS = 'TV_SHOWS',
+  MOVIE = 'movie',
+  TV_SHOWS = 'tv_show',
 }
 
 export type Show = {
