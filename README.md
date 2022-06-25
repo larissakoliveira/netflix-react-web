@@ -49,7 +49,7 @@ I tried to apply as much as possible these rules from [Conventional Commits](htt
 
 * **feature/grid** -> used to style and render all shows, list shows.
 
-* **feature/grid** -> used to try to add any extra feature, functionality.
+* **feature/extras** -> used to try to add any extra feature, functionality.
 
 ### Techs
 
