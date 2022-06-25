@@ -9,14 +9,13 @@ import Input from 'components/input/input';
 import userSlice from 'store/user/user.slice';
 import Button from 'components/button/button';
 import { useDispatch, useSelector } from 'react-redux';
-import { tokenSelector } from 'store/user/user.selector';
 import ErrorMessage from 'components/error-message/error-message';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { SHOWS_URL } from 'screens/shows/shows.type';
 import { USER_TOKEN_COOKIE } from 'store/user/user.type';
+import { errorSelector, tokenSelector } from 'store/user/user.selector';
 import { Wrapper } from './login.styled';
 import { loginSchema } from './login.schema';
-import { errorSelector } from '../../store/user/user.selector';
 
 export default function Form() {
   const [data, setData] = useState({
@@ -34,7 +33,6 @@ export default function Form() {
 
   const handleChange = useCallback(
     ({ target }: React.ChangeEvent<HTMLInputElement>) => {
-      setError('');
       setData((prevData) => ({
         ...prevData,
         [target.name]: target.value,
@@ -92,6 +90,7 @@ export default function Form() {
       alignContent="center"
       justifyContent="center"
     >
+      <h1>NETFLIX</h1>
       <Grid item xs={2}>
 
         <Input
@@ -103,11 +102,11 @@ export default function Form() {
         <Input
           type="password"
           name="password"
-          placeholder="Senha"
+          placeholder="Password"
           onChange={handleChange}
         />
         <ErrorMessage message={error || userError} />
-        <Button onClick={handleSend}>Entrar</Button>
+        <Button onClick={handleSend}>Login</Button>
 
       </Grid>
     </Wrapper>

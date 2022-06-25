@@ -1,9 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { ShowData } from 'store/shows/shows.type';
+import { Shows } from 'store/shows/shows.type';
 import reducers from 'store/shows/shows.reducer';
 
-export const initialState: ShowData = {
-  data: { },
+const initialState: Shows = {
+  data: {
+    myList: [],
+    list: {},
+  },
   settings: {
     loading: false,
   },
@@ -22,8 +25,8 @@ const {
 } = showsSlice;
 
 export {
-  showsActions,
   showsReducer,
+  showsActions,
 };
 
 export default showsSlice;

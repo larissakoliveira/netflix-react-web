@@ -1,7 +1,7 @@
 import axiosInstance from 'modules/axios/axios';
-import { Props } from './shows.type';
+import { Props } from 'services/shows/shows.type';
 
-export const showsService = ({ token }: Props) => {
+const showsService = ({ token }: Props) => {
   const config = {
     headers: {
       Authorization: `Bearer ${token}`,
@@ -10,7 +10,12 @@ export const showsService = ({ token }: Props) => {
 
   const getList = () => axiosInstance.get('/shows', config);
 
+  const getMyList = () => axiosInstance.get('/list', config);
+
   return {
     getList,
+    getMyList,
   };
 };
+
+export default showsService;

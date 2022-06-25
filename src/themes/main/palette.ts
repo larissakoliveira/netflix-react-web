@@ -14,6 +14,6 @@ const border = {
 
 export const palette = {
   core,
-  typography,
   border,
+  typography,
 };
