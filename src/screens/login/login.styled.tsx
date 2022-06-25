@@ -5,3 +5,9 @@ export const Wrapper = styled(Grid)`
     min-height: 100vh;
     background-color: ${(props) => props.theme.palette.core.secondary};
 `;
+
+export const ImageContainer = styled.img`
+    max-width: 100%;
+    display: block;
+    margin: auto auto 8rem;
+`;

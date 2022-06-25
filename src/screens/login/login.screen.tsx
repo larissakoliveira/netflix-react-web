@@ -14,7 +14,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { SHOWS_URL } from 'screens/shows/shows.type';
 import { USER_TOKEN_COOKIE } from 'store/user/user.type';
 import { errorSelector, tokenSelector } from 'store/user/user.selector';
-import { Wrapper } from './login.styled';
+import { Wrapper, ImageContainer } from './login.styled';
 import { loginSchema } from './login.schema';
 
 export default function Form() {
@@ -90,7 +90,6 @@ export default function Form() {
       alignContent="center"
       justifyContent="center"
     >
-      <h1>NETFLIX</h1>
       <Grid item xs={2}>
 
         <Input
@@ -105,6 +104,7 @@ export default function Form() {
           placeholder="Password"
           onChange={handleChange}
         />
+        <ImageContainer />
         <ErrorMessage message={error || userError} />
         <Button onClick={handleSend}>Login</Button>
 
