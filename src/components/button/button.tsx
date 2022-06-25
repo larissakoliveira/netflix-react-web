@@ -7,5 +7,5 @@ export default function Button({ onClick, children }: Props) {
     <StyledButton onClick={onClick}>
       {children}
     </StyledButton>
-  )
+  );
 }
