@@ -26,7 +26,8 @@
       "types/*": [ "src/types/*" ],
       "services/*": [ "src/services/*" ],
       "themes/*": [ "src/themes/*" ],
-      "components/*": [ "src/components/*" ]
+      "components/*": [ "src/components/*" ],
+      "assets/*": [ "src/assets/*" ]
     }
   },
   "include": [

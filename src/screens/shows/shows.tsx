@@ -14,6 +14,10 @@ export default function Shows() {
   const movies = list.movie;
   const tvShows = list.tv_show;
 
+  console.log('mylist', typeof myList, myList);
+  console.log('movies', typeof movies, movies);
+  console.log('tvShows', typeof tvShows, tvShows);
+
   useEffect(
     () => {
       dispatch(showsActions.getList());
@@ -35,8 +39,8 @@ export default function Shows() {
           slidesToShow={1}
           autoplaySpeed={2400}
         />
-        { movies && <ShowsList shows={movies} title="Movies" /> }
         { myList && <ShowsList shows={myList} title="My List" />}
+        { movies && <ShowsList shows={movies} title="Movies" /> }
         { tvShows && <ShowsList shows={tvShows} title="Tv Shows" /> }
       </Container>
     </>
