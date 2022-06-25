@@ -14,10 +14,6 @@ export default function Shows() {
   const movies = list.movie;
   const tvShows = list.tv_show;
 
-  console.log('mylist', typeof myList, myList);
-  console.log('movies', typeof movies, movies);
-  console.log('tvShows', typeof tvShows, tvShows);
-
   useEffect(
     () => {
       dispatch(showsActions.getList());

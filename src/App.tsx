@@ -12,6 +12,8 @@ import { LOGIN_URL } from 'screens/login/login.type';
 import { GlobalStyles } from 'themes/main/global.styles';
 import { SHOWS_URL } from 'screens/shows/shows.type';
 import Guard from 'components/guard/guard';
+import SignUp from 'screens/sign-up/sign-up.screen';
+import { SIGN_UP_URL } from 'screens/sign-up/sign-up.type';
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
       <GlobalStyles />
       <ThemeProvider theme={theme}>
         <Routes>
+          <Route element={<SignUp />} path={SIGN_UP_URL} />
           <Route element={<Login />} path={LOGIN_URL} />
           <Route
             element={(

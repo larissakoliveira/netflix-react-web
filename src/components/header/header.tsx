@@ -5,7 +5,7 @@ import { ImageContainer } from './header.styled';
 
 export default function Header() {
   return (
-    <Grid container>
+    <Grid mt={5} container>
       <ImageContainer src={netflixLogo} />
     </Grid>
   );
