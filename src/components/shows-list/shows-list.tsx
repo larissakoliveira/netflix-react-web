@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Slider from 'react-slick';
 import Item from 'components/shows-list/components/item/item';
 import 'slick-carousel/slick/slick.css';
@@ -7,6 +7,9 @@ import Arrow from 'components/shows-list/components/arrow/arrow';
 import { Title } from 'components/shows-list/components/title/title.styled';
 import { Box } from '@mui/material';
 import { Props } from 'components/shows-list/shows-list.type';
+import { LOGIN_URL } from 'screens/login/login.type';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { USER_TOKEN_COOKIE } from 'store/user/user.type';
 
 export default function ShowsList({
   title,
@@ -18,6 +21,20 @@ export default function ShowsList({
   height = '260px',
   slidesToShow = 5,
 }: Props) {
+  const navigate = useNavigate();
+  const from = useLocation();
+  const token = localStorage.getItem(USER_TOKEN_COOKIE);
+
+  useEffect(
+    () => {
+      if (!token) {
+        navigate(LOGIN_URL, {
+          state: { from },
+        });
+      }
+    },
+    [token],
+  );
   return (
     <Box margin="82px 0">
       {title && <Title>{title}</Title>}

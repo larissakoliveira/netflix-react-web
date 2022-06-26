@@ -3,12 +3,12 @@ import Button from 'components/button/button';
 import ErrorMessage from 'components/error-message/error-message';
 import Input from 'components/input/input';
 import React, { useCallback, useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { LOGIN_URL } from 'screens/login/login.type';
 import userService from 'services/user/user';
 import netflixLogo from 'assets/imgs/netflix-title.png';
 import { signUpSchema } from './sign-up.schema';
-import { ImageContainer, Wrapper } from './sign-up.styled';
+import { ImageContainer, StyledLink, Wrapper } from './sign-up.styled';
 
 export default function SignUp() {
   const [data, setData] = useState({
@@ -76,11 +76,11 @@ export default function SignUp() {
           onChange={handleChange}
         />
         <ErrorMessage message={error} />
-        <Button onClick={handleSend}>SignUp</Button>
-        <h3>
+        <Button onClick={handleSend}>Sign Up</Button>
+        <p>
           Already registered?
-          <Link to={LOGIN_URL}>Login</Link>
-        </h3>
+          <StyledLink to={LOGIN_URL}> Login</StyledLink>
+        </p>
       </Grid>
     </Wrapper>
   );

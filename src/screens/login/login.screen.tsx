@@ -93,6 +93,7 @@ export default function Form() {
     >
       <Grid item xs={2}>
         <ImageContainer src={netflixLogo} />
+        <h4>Welcome! Please, do your login</h4>
         <Input
           type="email"
           name="email"
@@ -107,7 +108,6 @@ export default function Form() {
         />
         <ErrorMessage message={error || userError} />
         <Button onClick={handleSend}>Login</Button>
-
       </Grid>
     </Wrapper>
   );

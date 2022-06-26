@@ -6,11 +6,11 @@ import {
   select,
   takeLatest,
 } from 'redux-saga/effects';
-import showsService from 'services/shows/shows';
 import { AxiosResponse } from 'axios';
 import { Show } from 'store/shows/shows.type';
-import { tokenSelector } from 'store/user/user.selector';
+import showsService from 'services/shows/shows';
 import { Data as UserData } from 'store/user/user.type';
+import { tokenSelector } from 'store/user/user.selector';
 
 function* getList() {
   yield put(showsActions.setSettings({ loading: true }));

@@ -3,11 +3,11 @@ import { Provider } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import store from 'store/store/store';
-import ShowById from 'screens/show-by-id/show-by-id';
+import ShowDetails from 'screens/show-details/show-details';
 import theme from 'themes/main/theme';
 import ShowsList from 'screens/shows/shows';
 import Login from 'screens/login/login.screen';
-import { SHOW_URL } from 'screens/show-by-id/show-by-id.type';
+import { SHOW_URL } from 'screens/show-details/show-details-type';
 import { LOGIN_URL } from 'screens/login/login.type';
 import { GlobalStyles } from 'themes/main/global.styles';
 import { SHOWS_URL } from 'screens/shows/shows.type';
@@ -34,7 +34,7 @@ function App() {
           <Route
             element={(
               <Guard>
-                <ShowById />
+                <ShowDetails />
               </Guard>
             )}
             path={SHOW_URL}
