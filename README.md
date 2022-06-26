@@ -64,6 +64,7 @@ I tried to apply as much as possible these rules from [Conventional Commits](htt
    * [Axios](https://axios-http.com/docs/intro)
    * [React-Slick](https://react-slick.neostack.com/docs/get-started/)
    * [Redux Saga](https://redux-saga.js.org/)
+   * [Redux Icons](https://react-icons.github.io/react-icons)
  
  ### Status
  
