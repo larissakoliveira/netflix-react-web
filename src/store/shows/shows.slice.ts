@@ -7,6 +7,7 @@ const initialState: Shows = {
     myList: [],
     list: {},
   },
+  showDetailsId: 0,
   settings: {
     loading: false,
   },

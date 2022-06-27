@@ -31,9 +31,12 @@ export type Settings = {
 
 export type Error = string;
 
+export type ShowDetailsIdPayload = number;
+
 export type Shows = {
   data: Data
   settings: Settings
+  showDetailsId: number
   error: Error
 };
 
@@ -44,3 +47,4 @@ export type SetList = BaseReducer<List>;
 export type SetMyList = BaseReducer<Data['myList']>;
 export type SetSettings = BaseReducer<Settings>;
 export type SetError = BaseReducer<Error>;
+export type ShowDetailsId = BaseReducer<ShowDetailsIdPayload>;

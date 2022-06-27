@@ -1,8 +1,8 @@
-import { configureStore } from '@reduxjs/toolkit';
-import createSagaMiddleware from 'redux-saga';
-import userSaga from 'store/user/user.saga';
 import { all } from 'redux-saga/effects';
+import userSaga from 'store/user/user.saga';
+import createSagaMiddleware from 'redux-saga';
 import showsSaga from 'store/shows/shows.saga';
+import { configureStore } from '@reduxjs/toolkit';
 import { showsReducer } from 'store/shows/shows.slice';
 import userSlice from '../user/user.slice';
 

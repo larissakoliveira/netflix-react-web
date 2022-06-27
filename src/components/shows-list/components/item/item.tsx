@@ -1,6 +1,6 @@
 import React from 'react';
-import { Props } from 'components/shows-list/components/item/item.type';
 import { Link } from 'react-router-dom';
+import { Props } from 'components/shows-list/components/item/item.type';
 import { Cover } from './item.styled';
 
 export default function Item({

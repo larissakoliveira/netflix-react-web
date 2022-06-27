@@ -3,18 +3,18 @@ import React, {
   useState,
   useEffect,
 } from 'react';
-import { Grid } from '@mui/material';
 import { Error } from 'types/yup';
+import { Grid } from '@mui/material';
 import Input from 'components/input/input';
 import userSlice from 'store/user/user.slice';
 import Button from 'components/button/button';
-import { useDispatch, useSelector } from 'react-redux';
-import ErrorMessage from 'components/error-message/error-message';
-import { useLocation, useNavigate } from 'react-router-dom';
 import { SHOWS_URL } from 'screens/shows/shows.type';
-import { USER_TOKEN_COOKIE } from 'store/user/user.type';
-import { errorSelector, tokenSelector } from 'store/user/user.selector';
+import { useDispatch, useSelector } from 'react-redux';
 import netflixLogo from 'assets/imgs/netflix-title.png';
+import { USER_TOKEN_COOKIE } from 'store/user/user.type';
+import { useLocation, useNavigate } from 'react-router-dom';
+import ErrorMessage from 'components/error-message/error-message';
+import { errorSelector, tokenSelector } from 'store/user/user.selector';
 import { Wrapper, ImageContainer } from './login.styled';
 import { loginSchema } from './login.schema';
 
@@ -93,6 +93,7 @@ export default function Form() {
     >
       <Grid item xs={2}>
         <ImageContainer src={netflixLogo} />
+        <h4>Please, do your login</h4>
         <Input
           type="email"
           name="email"
@@ -107,7 +108,6 @@ export default function Form() {
         />
         <ErrorMessage message={error || userError} />
         <Button onClick={handleSend}>Login</Button>
-
       </Grid>
     </Wrapper>
   );

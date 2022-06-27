@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { useLocation, useNavigate } from 'react-router-dom';
 import { LOGIN_URL } from 'screens/login/login.type';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Props } from './guard.type';
 import { tokenSelector } from '../../store/user/user.selector';
 

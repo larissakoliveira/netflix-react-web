@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
+import { Container } from '@mui/material';
+import Header from 'components/header/header';
 import { useDispatch, useSelector } from 'react-redux';
 import { showsActions } from 'store/shows/shows.slice';
-import { Container } from '@mui/material';
 import ShowsList from 'components/shows-list/shows-list';
 import { listSelector, myListSelector } from 'store/shows/shows.selector';
-import Header from 'components/header/header';
 
 export default function Shows() {
   const dispatch = useDispatch();

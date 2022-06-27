@@ -1,10 +1,10 @@
+import { AxiosError } from 'axios';
 import userService from 'services/user/user';
-import { call, put, takeLatest } from 'redux-saga/effects';
-import { AuthPayload, AuthResponse, ErrorMessageEnum } from 'services/user/user.type';
-import userSlice, { initialState } from 'store/user/user.slice';
 import { PayloadAction } from '@reduxjs/toolkit';
 import { USER_TOKEN_COOKIE } from 'store/user/user.type';
-import { AxiosError } from 'axios';
+import { call, put, takeLatest } from 'redux-saga/effects';
+import userSlice, { initialState } from 'store/user/user.slice';
+import { AuthPayload, AuthResponse, ErrorMessageEnum } from 'services/user/user.type';
 
 function* authentication(action: PayloadAction<AuthPayload>) {
   try {
@@ -21,16 +21,15 @@ function* authentication(action: PayloadAction<AuthPayload>) {
   }
 }
 
-function* logoff() {
+function* logOff() {
   const { data } = userSlice.getInitialState();
-
   yield put(userSlice.actions.setData(data));
   localStorage.removeItem(USER_TOKEN_COOKIE);
 }
 
 const userSaga = [
   takeLatest('user/authentication', authentication),
-  takeLatest('user/logoff', logoff),
+  takeLatest('user/logOff', logOff),
 ];
 
 export default userSaga;

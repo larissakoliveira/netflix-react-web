@@ -7,8 +7,8 @@ export const Cover = styled.div<CoverProps>`
   
   background-image: url(${(props) => props.cover});
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
+  background-size: cover;
   border-radius: 10px;
   margin-right: 20px;
 `;

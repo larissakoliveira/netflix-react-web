@@ -12,9 +12,15 @@ const showsService = ({ token }: Props) => {
 
   const getMyList = () => axiosInstance.get('/list', config);
 
+  const showsDetails = () => axiosInstance.get('/shows/:id', config);
+
+  const addShowList = () => axiosInstance.post('/list', config);
+
   return {
     getList,
     getMyList,
+    addShowList,
+    showsDetails,
   };
 };
 
