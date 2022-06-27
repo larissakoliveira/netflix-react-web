@@ -4,7 +4,8 @@
 
 # Netflix clone by Etho / McFadyen - Bootcamp
 
-Project create with [React](https://reactjs.org/)
+Project create with [React](https://reactjs.org/)<br>
+Node.js [API](https://github.com/larissakoliveira/netflix-nodejs-api) created for this project.
 
 ### Table of Contents
 =================
