@@ -1,22 +1,22 @@
 import React from 'react';
 import { Grid } from '@mui/material';
-import userProfile from 'assets/imgs/user.png';
+import { useDispatch } from 'react-redux';
 import userSlice from 'store/user/user.slice';
+import userProfile from 'assets/imgs/user.png';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import netflixLogo from 'assets/imgs/netflix-title.png';
-import { USER_TOKEN_COOKIE } from 'store/user/user.type';
-import { ImageContainer, LogOff } from './header.styled';
+// import { ActionCreatorWithOptionalPayload } from '@reduxjs/toolkit';
+import { ImageContainer, LogOff, MenuContainer } from './header.styled';
 
 export default function Header() {
-  const logoff = async () => {
-    const { data } = userSlice.getInitialState();
-    userSlice.actions.setData(data);
-    await localStorage.removeItem(USER_TOKEN_COOKIE);
-  };
+  const dispatch = useDispatch();
+  const logoff = () => dispatch(userSlice.actions.logOff());
 
   return (
     <Grid container mt={5}>
-      <GiHamburgerMenu color="#ffffff" />
+      <MenuContainer>
+        <GiHamburgerMenu color="#ffffff" />
+      </MenuContainer>
       <ImageContainer src={netflixLogo} />
       <LogOff src={userProfile} onClick={logoff} />
     </Grid>

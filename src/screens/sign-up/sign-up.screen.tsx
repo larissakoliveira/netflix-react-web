@@ -1,12 +1,12 @@
 import { Grid } from '@mui/material';
-import Button from 'components/button/button';
-import ErrorMessage from 'components/error-message/error-message';
 import Input from 'components/input/input';
-import React, { useCallback, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
-import { LOGIN_URL } from 'screens/login/login.type';
 import userService from 'services/user/user';
+import Button from 'components/button/button';
+import React, { useCallback, useState } from 'react';
+import { LOGIN_URL } from 'screens/login/login.type';
 import netflixLogo from 'assets/imgs/netflix-title.png';
+import { useLocation, useNavigate } from 'react-router-dom';
+import ErrorMessage from 'components/error-message/error-message';
 import { signUpSchema } from './sign-up.schema';
 import { ImageContainer, StyledLink, Wrapper } from './sign-up.styled';
 

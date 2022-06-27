@@ -1,12 +1,18 @@
-import styled from 'styled-components';
 import { Grid } from '@mui/material';
+import styled from 'styled-components';
 
-export const Container = styled(Grid)`
+export const DetailsContainer = styled(Grid)`
     color: #fff;
-    text-align: center;
+    flex-direction: column;
 
     img {
         width: 100%;
-        opacity: 0.8;
+    }
+
+    button {
+        background-color: ${(props) => props.theme.palette.core.primary};
+        color: #fff;
+        border-radius: 3px;
+        padding: 3px;
     }
 `;
