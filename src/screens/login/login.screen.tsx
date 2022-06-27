@@ -1,72 +1,114 @@
-import { Grid } from "@mui/material";
-import { Wrapper } from "./login.styled";
-import { IDataState } from "./login.types";
-import {loginSchema} from "./login.schema";
-import Input from "../../components/input/input";
-import Button from "../../components/button/button";
-import ErrorMessage from "../../components/error-message/error-message";
-import { 
-    useCallback,  
-    useState 
-} from "react";
-
+import React, {
+  useCallback,
+  useState,
+  useEffect,
+} from 'react';
+import { Error } from 'types/yup';
+import { Grid } from '@mui/material';
+import Input from 'components/input/input';
+import userSlice from 'store/user/user.slice';
+import Button from 'components/button/button';
+import { SHOWS_URL } from 'screens/shows/shows.type';
+import { useDispatch, useSelector } from 'react-redux';
+import netflixLogo from 'assets/imgs/netflix-title.png';
+import { USER_TOKEN_COOKIE } from 'store/user/user.type';
+import { useLocation, useNavigate } from 'react-router-dom';
+import ErrorMessage from 'components/error-message/error-message';
+import { errorSelector, tokenSelector } from 'store/user/user.selector';
+import { Wrapper, ImageContainer } from './login.styled';
+import { loginSchema } from './login.schema';
 
 export default function Form() {
+  const [data, setData] = useState({
+    email: '',
+    password: '',
+  });
 
-    const [data, setData] = useState<IDataState>({
-        email: '',
-        password: ''
-    })
+  const [error, setError] = useState('');
 
-    const [error, setError] = useState<string>('')
+  const dispatch = useDispatch();
+  const token = useSelector(tokenSelector);
+  const userError = useSelector(errorSelector);
+  const navigate = useNavigate();
+  const from = useLocation();
 
-    const handleChange = useCallback(
-        ({ target }: React.ChangeEvent<HTMLInputElement>) => {
-            setData(prevData => ({
-                ...prevData,
-                [target.name]: target.value
-            }))
-        },
-        [setData]
-    )
+  const handleChange = useCallback(
+    ({ target }: React.ChangeEvent<HTMLInputElement>) => {
+      setData((prevData) => ({
+        ...prevData,
+        [target.name]: target.value,
+      }));
+    },
+    [setData],
+  );
 
-    const handleSend = useCallback(
-        async () => {
-            try {  
-                await loginSchema.validate(data, {abortEarly: false}) 
-                setError('')
+  const resetError = useCallback(
+    (errorMessage: string) => {
+      setError(errorMessage);
+    },
+    [],
+  );
 
-            } catch (error: any) {
-               setError(error.errors[0])
-            }
-        },
-        [data]
-    )  
+  const handleSend = useCallback(
+    async () => {
+      try {
+        await loginSchema.validate(data);
+        resetError('');
+        dispatch(userSlice.actions.authentication(data));
+      } catch (yupError: unknown) {
+        setError((yupError as Error).errors[0]);
+      }
+    },
+    [data],
+  );
 
-    return (
-        <Wrapper 
-            container 
-            alignContent="center" 
-            justifyContent="center" 
-        >
-            <Grid item xs={2}>
-               
-                <Input 
-                    type="email" 
-                    name="email" 
-                    placeholder="E-mail" 
-                    onChange={handleChange} 
-                    />               
-                <Input 
-                    type="password" 
-                    name="password" 
-                    placeholder="Senha" 
-                    onChange={handleChange} 
-                />
-                <ErrorMessage message={error}/>
-                <Button onClick={handleSend}>Entrar</Button>
-                
-            </Grid>
-        </Wrapper>
-    )
+  useEffect(
+    () => {
+      if (token) {
+        navigate(SHOWS_URL, {
+          state: { from },
+        });
+      }
+    },
+    [token],
+  );
+
+  useEffect(
+    () => {
+      const localToken = localStorage.getItem(USER_TOKEN_COOKIE);
+      if (localToken) {
+        dispatch(userSlice.actions.setData({
+          token: localToken,
+        }));
+      }
+    },
+    [],
+  );
+
+  return (
+    <Wrapper
+      container
+      alignContent="center"
+      justifyContent="center"
+    >
+      <Grid item xs={2}>
+        <ImageContainer src={netflixLogo} />
+        <h4>Please, do your login</h4>
+        <Input
+          type="email"
+          name="email"
+          placeholder="E-mail"
+          onChange={handleChange}
+        />
+        <Input
+          type="password"
+          name="password"
+          placeholder="Password"
+          onChange={handleChange}
+        />
+        <ErrorMessage message={error || userError} />
+        <Button onClick={handleSend}>Login</Button>
+      </Grid>
+    </Wrapper>
+  );
 }
